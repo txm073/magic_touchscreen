@@ -421,3 +421,19 @@ magicts_finalize(void *ctxPtr)
     }
 }
 
+void magicts_getinputs(void* ctxPtr, float* xArr, float* yArr, int* idArr, int* len) {
+  TouchData touches = magicts_update(ctxPtr); 
+  int count = 0;
+  for(int i=0; i<NUM_TOUCHES; ++i)
+  {
+    if(touches.id[i] >= 0)
+    {
+      xArr[count] = touches.x[i];
+      yArr[count] = touches.y[i];  
+      idArr[count] = i;
+      count++;
+    }
+  }
+  *len = count;
+}
+
