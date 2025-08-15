@@ -51,6 +51,8 @@ extern "C"
      * Deinitialize touch screens and free the resources used by this library.
      */
     void magicts_finalize(void *ctxPtr);
+
+    void magicts_getinputs(void* ctxPtr, float* xArr, float* yArr, int* idArr, int* len);
 #ifdef __cplusplus
 }
 #endif
