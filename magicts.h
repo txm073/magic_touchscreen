@@ -1,5 +1,4 @@
-#ifndef MAGICTS_H_
-#define MAGICTS_H_
+#pragma once
 
 #define NUM_TOUCHES 100
 #define MAX_TOUCHSCREENS 16
